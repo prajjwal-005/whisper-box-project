@@ -7,7 +7,9 @@ export const config = {
 
 export async function middleware(request: NextRequest) {
   const url = request.nextUrl;
-    const secret = process.env.AUTH_SECRET;
+  
+ 
+  const secret = process.env.AUTH_SECRET;
 
   const token = await getToken({ 
     req: request, 
@@ -17,7 +19,6 @@ export async function middleware(request: NextRequest) {
       : 'authjs.session-token'
   });
 
-  
   if (token && (
     url.pathname === '/' || 
     url.pathname.startsWith('/sign-in') || 
