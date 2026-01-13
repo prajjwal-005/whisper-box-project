@@ -12,7 +12,7 @@ export const config = {
     '/',
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
     '/dashboard/:path*',
-    '/verify/:path*''
+    '/verify/:path*'
   ]
 
 }
