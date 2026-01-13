@@ -88,7 +88,7 @@ export default function SafetyPage() {
           </section>
 
           <p className="text-sm text-muted-foreground pt-8 border-t border-border">
-            Report violations to <a href="mailto:support@whisper-box.xyz" className="text-primary hover:underline">support@whisper-box.xyz</a>
+            Report violations to <a href="mailto:whisperhelpin@gmail.com" className="text-primary hover:underline">whisperhelpin@gmail.com</a>
           </p>
         </div>
       </div>

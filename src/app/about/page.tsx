@@ -50,7 +50,7 @@ export default function AboutPage() {
           </div>
 
           <div className="flex flex-col items-center space-y-4">
-            <a href="mailto:support@whisper-box.xyz">
+            <a href="mailto:whisperhelpin@gmail.com">
               <Button size="lg" className="gap-2 px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-cyan-500/20 transition-all">
                 <Mail className="h-5 w-5" />
                 Email Support

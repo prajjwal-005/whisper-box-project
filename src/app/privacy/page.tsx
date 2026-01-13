@@ -87,7 +87,7 @@ export default function PrivacyPage() {
           </section>
           
           <p className="text-sm text-muted-foreground pt-8 border-t border-border">
-            Questions? Contact <a href="mailto:support@whisper-box.xyz" className="text-primary hover:underline">support@whisper-box.xyz</a>
+            Questions? Contact <a href="mailto:support@whisper-box.xyz" className="text-primary hover:underline">whisperhelpin@gmail.com</a>
           </p>
         </div>
       </div>
