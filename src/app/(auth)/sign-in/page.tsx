@@ -55,11 +55,11 @@ export default function SignInPage() {
       return;
     }
 
-    if (result?.url) {
-      toast.success('Login Successful');
-      router.replace('/dashboard');
-     
-    }
+if (result?.url) {
+  toast.success('Login Successful');
+  setIsSubmitting(false); 
+ window.location.href = '/dashboard';
+}
   } catch (error) {
     toast.error('An unexpected error occurred');
     setIsSubmitting(false);

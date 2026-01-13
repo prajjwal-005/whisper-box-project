@@ -10,6 +10,7 @@ export const config = {
     '/sign-in',
     '/sign-up',
     '/',
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
     '/dashboard/:path*',
     '/verify/:path*'
   ]
