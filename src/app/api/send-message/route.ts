@@ -6,7 +6,7 @@ import { messageSchema } from '@/schemas/messageSchema';
 import { headers } from 'next/headers';
 import RateLimitModel from '@/model/RateLimit';
 import mongoose from 'mongoose';
-
+export const dynamic = 'force-dynamic';
 interface IViolation {
   ip: string;
   count: number;

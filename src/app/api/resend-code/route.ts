@@ -1,7 +1,7 @@
 import {dbConnect} from '@/lib/dbConnect';
 import UserModel from '@/model/User.model';
 import { sendVerificationEmail } from '@/helpers/sendEmailVerification';
-
+export const dynamic = 'force-dynamic';
 export async function POST(request: Request) {
   
   console.log("1. Resend Code API started");

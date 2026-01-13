@@ -2,7 +2,7 @@ import { auth } from "@/app/api/auth/[...nextauth]/options";
 import { dbConnect } from "@/lib/dbConnect";
 import UserModel from "@/model/User.model";
 import mongoose from "mongoose"; 
-
+export const dynamic = 'force-dynamic';
 export async function DELETE(
   request: Request,
   { params }: { params: Promise<{ messageid: string }> } 

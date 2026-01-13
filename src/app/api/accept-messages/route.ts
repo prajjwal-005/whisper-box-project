@@ -1,7 +1,7 @@
 import { auth} from "@/app/api/auth/[...nextauth]/options";
 import {dbConnect} from "@/lib/dbConnect";
 import UserModel from "@/model/User.model";
-
+export const dynamic = 'force-dynamic';
 import  {acceptMessageSchema as AcceptMessageSchema}  from '../../../schemas/acceptMessageSchema'; 
 
 export async function POST(request:Request) {
