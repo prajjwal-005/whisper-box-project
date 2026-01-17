@@ -12,6 +12,18 @@ export const authConfig: NextAuthConfig = {
   pages: {
     signIn: '/sign-in',
   },
+  cookies: {
+    sessionToken: {
+      name: `__Secure-authjs.session-token`,
+      options: {
+        httpOnly: true,
+        sameSite: 'lax',
+        path: '/',
+        secure: true,
+        domain: 'whisper-box.xyz' 
+      }
+    }
+  },
   providers: [
     Credentials({
       id: 'credentials',
