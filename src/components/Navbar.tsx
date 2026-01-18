@@ -52,29 +52,37 @@ const Navbar = () => {
                     <ModeToggle /> 
 
                     {status === 'loading' ? (
-                        <div className="hidden sm:flex items-center gap-2 text-muted-foreground text-sm">
-                            <Loader2 className="w-4 h-4 animate-spin" />
-                        </div>
-                    ) : session ? (
-                        <>
-                            
-                            <Link href="/dashboard"  prefetch={false}>
+                    <div className="hidden sm:flex items-center gap-2 text-muted-foreground text-sm">
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                    </div>
+                ) : session ? (
+                    <>
+                        {/* Show Dashboard button OR Username based on current page */}
+                        {pathname.startsWith('/dashboard') ? (
+                            <div className="flex items-center gap-2 px-2 md:px-3 py-1.5 md:py-2 rounded-md bg-gray-100 dark:bg-gray-800">
+                                <span className="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300 truncate max-w-[80px] md:max-w-none">
+                                    {session.user.username}
+                                </span>
+                            </div>
+                        ) : (
+                            <Link href="/dashboard" prefetch={false}>
                                 <Button size="sm" variant="ghost" className="shadow-sm border border-transparent hover:border-gray-200 dark:hover:border-gray-700">
                                     <LayoutDashboard className="w-4 h-4 md:mr-2" />
                                     <span className="hidden md:inline">Dashboard</span>
                                 </Button>
                             </Link>
-                            
-                            <Button 
-                                size="sm" 
-                                onClick={() => signOut()} 
-                                variant="destructive"
-                                className="shadow-sm"
-                            >
-                                <LogOut className="w-4 h-4 md:mr-2" />
-                                <span className="hidden md:inline">Logout</span>
-                            </Button>
-                        </>
+                        )}
+                                                
+                        <Button 
+                            size="sm" 
+                            onClick={() => signOut()} 
+                            variant="destructive"
+                            className="shadow-sm"
+                        >
+                            <LogOut className="w-4 h-4 md:mr-2" />
+                            <span className="hidden md:inline">Logout</span>
+                        </Button>
+                    </>
                     ) : (
                         <Link href='/sign-in' prefetch={false}>
                             <Button size="sm" className="shadow-sm">
